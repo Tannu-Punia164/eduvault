@@ -1,0 +1,197 @@
+/* Main container holding background image */
+.image-container {
+    position: relative; /* This will allow child elements to be positioned relative to it */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent child elements from overflowing outside the container */
+}
+
+/* Background image styling */
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full screen */
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for the header */
+    padding: 20px 0; /* Vertical padding for header */
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    z-index: 3; /* Ensure the header is on top of other elements */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar links horizontally */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between each link */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FF5722; /* Change color on hover */
+}
+
+/* Container for the heading and subheading */
+.heading-container {
+    position: absolute;
+    top: 10%; /* Adjust the vertical position of the heading */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2; /* Make sure the headings are above the background */
+    text-align: center; /* Center-align the text */
+    width: 100%;
+}
+
+/* Main heading: Dive into your academic voyage */
+.main-heading {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+/* Highlight the word "voyage" in a different color */
+.highlight {
+    color: #FF5722; /* Change this color as you like */
+}
+
+/* Subheading styling */
+.subheading {
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+    margin-top: 5px; /* Reduced space between heading and subheading */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow to improve readability */
+}
+
+/* Flexbox container to hold department boxes (courses) */
+.dept-container {
+    position: absolute;
+    top: 30%; /* Adjust the vertical position to bring boxes closer to subheading */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    flex-wrap: wrap; /* Wrap boxes to the next line when needed */
+    justify-content: center; /* Center align the boxes horizontally */
+    gap: 10px; /* Reduced gap between boxes */
+    z-index: 2; /* Ensure that the boxes are above the background */
+    max-width: 1200px; /* Limit the width of the department box container */
+    width: 100%; /* Make it responsive, fill available space */
+    box-sizing: border-box; /* Prevent the boxes from overflowing horizontally */
+    padding: 0 20px; /* Add horizontal padding to avoid touching the edges */
+}
+
+/* Individual department boxes */
+.box {
+    position: relative;
+    width: 220px; /* Reduced width for boxes */
+    height: 270px; /* Adjusted height for boxes */
+    display: flex;
+    flex-direction: column; /* Stack logo and department name vertically */
+    align-items: center; /* Center align the items horizontally */
+    justify-content: center; /* Center the items vertically */
+    padding: 20px;
+    border: 2px solid rgb(236, 175, 8);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    transition: transform 0.3s ease; /* Add smooth scale effect on hover */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+
+/* Hover effect for department boxes */
+.box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+
+/* Department name styling */
+.dept {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(180, 97, 3);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Logo image styling */
+.logo {
+    height: 80px; /* Adjust the size of the logo */
+    margin-bottom: 10px; /* Space between the logo and department name */
+}
+
+/* Link styling (without underline by default) */
+a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit color from parent element */
+}
+
+/* Hover effect on the department name */
+a:hover .dept {
+    color: #FF5722; /* Change the department name color on hover */
+}
+
+/* Media Queries for responsiveness */
+
+/* For small screens (mobile devices) */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 40px; /* Reduce heading size on mobile */
+    }
+
+    .subheading {
+        font-size: 16px; /* Reduce subheading size on mobile */
+    }
+
+    .dept-container {
+        top: 50%; /* Move boxes down slightly */
+        gap: 10px; /* Decrease gap between boxes */
+    }
+
+    .box {
+        width: 180px; /* Further reduce box width on smaller screens */
+        height: 220px; /* Adjust box height for smaller screens */
+    }
+}
+
+/* For extra-small screens (mobile portrait) */
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 30px; /* Even smaller font size */
+    }
+
+    .subheading {
+        font-size: 14px; /* Adjust font size further */
+    }
+
+    .dept-container {
+        top: 60%; /* Move boxes further down */
+        gap: 8px; /* Further reduce gap */
+    }
+
+    .box {
+        width: 160px; /* Further reduce box width on very small screens */
+        height: 200px; /* Adjust box height for very small screens */
+    }
+}

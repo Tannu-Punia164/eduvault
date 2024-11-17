@@ -1,0 +1,199 @@
+/* Main container holding background image */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent child elements from overflowing outside the container */
+}
+
+/* Background image styling */
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full screen */
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for the header */
+    padding: 20px 0; /* Vertical padding for header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3; /* Ensure the header is on top of other elements */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar links horizontally */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between each link */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FF5722; /* Change color on hover */
+}
+
+/* Container for the heading and subheading */
+.heading-container {
+    position: absolute;
+    top: 10%; /* Adjust the vertical position of the heading */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2; /* Make sure the headings are above the background */
+    text-align: center; /* Center-align the text */
+    width: 100%;
+}
+
+/* Overlay to darken the background image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darken the background */
+    z-index: 1; /* Ensure it stays below the heading */
+}
+
+/* Main heading: Dive into your academic voyage */
+.main-heading {
+    position: absolute;
+    top: 35%; /* Adjust the top position to vertically center the heading */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; /* Ensure the heading appears above the background and overlay */
+}
+
+.main-heading span.highlight {
+    color: #FF5722; /* Highlight "voyage" with a different color */
+}
+
+/* Subheading: Every course is a new chapter waiting to be explored */
+.subheading {
+    position: absolute;
+    top: 45%; /* Position the subheading below the main heading */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    max-width: 800px; /* Ensure the subheading doesn't stretch too wide */
+    z-index: 2; /* Ensure it stays above the background and overlay */
+}
+
+label {
+    font-size: 24px; /* Increase the font size of the label */
+    font-weight: bold; /* Make the label text bold */
+    color: #be2d08; /* Change the label text color (use your preferred color) */
+    margin-bottom: 10px; /* Add some space below the label */
+    display: inline-block; /* Make the label a block-level element to be on a new line */
+    text-align: center; /* Center-align the label text */
+}
+
+/* Semester Dropdown Styling */
+.semester-selection {
+    position: absolute;
+    top: 55%; /* Position it just below the subheading */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    z-index: 2; /* Ensure it stays above the background and overlay */
+}
+
+.semester-selection select {
+    padding: 15px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: 2px solid #FF5722; /* Border color */
+    border-radius: 10px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.semester-selection select option {
+    background-color: #333; /* Dark background for dropdown options */
+    color: white; /* Text color */
+}
+
+/* Styling for subjects dropdown */
+.subjects-selection {
+    position: absolute;
+    top: 65%; /* Position it just below the semester dropdown */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    z-index: 2; /* Ensure it stays above the background and overlay */
+}
+
+.subjects-selection select {
+    padding: 15px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: 2px solid #FF5722; /* Border color */
+    border-radius: 10px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.subjects-selection select option {
+    background-color: #333; /* Dark background for dropdown options */
+    color: white; /* Text color */
+}
+
+/* Styling for the secondary options (Notes, PYQs, Books, Lab Practical) */
+.secondary-options {
+    position: absolute;
+    top: 75%; /* Position below subjects dropdown */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    z-index: 2;
+}
+
+.secondary-options select {
+    padding: 15px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: 2px solid #FF5722; /* Border color */
+    border-radius: 10px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.secondary-options select option {
+    background-color: #333; /* Dark background for dropdown options */
+    color: white;
+}
+

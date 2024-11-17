@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LMS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#timetable">Timetable</a></li>
+                <li><a href="#datesheets">Datesheets</a></li>
+                <li><a href="#syllabus">Syllabus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main container with background image -->
+    <div class="image-container">
+        <img class="background" src="images/Screenshot 2024-11-14 155814.png" alt="Background Image">
+        <!-- Overlay to darken the background image -->
+        <div class="overlay"></div>
+
+        <!-- Main heading: Dive into your academic voyage -->
+        <div class="main-heading">
+            Get Ready for Your Next Academic Milestone. <span class="highlight">Choose a Semester! </span>
+        </div>
+
+        <!-- Dropdown for selecting the semester -->
+        <div class="semester-selection">
+            <label for="semester">Select Semester:</label>
+            <select id="semester" name="semester" onchange="updateSubjects()">
+                <option value="">Select a semester</option>
+                <option value="semester1">Semester 1</option>
+                <option value="semester2">Semester 2</option>
+                <option value="semester3">Semester 3</option>
+                <option value="semester4">Semester 4</option>
+                <option value="semester5">Semester 5</option>
+                <option value="semester6">Semester 6</option>
+                <option value="semester7">Semester 7</option>
+                <option value="semester8">Semester 8</option>
+            </select>
+        </div>
+
+        <!-- Dropdown for selecting subjects (Initially hidden) -->
+        <div id="subjects-container" class="subjects-selection" style="display:none;">
+            <label for="subjects">Select Subjects:</label>
+            <select id="subjects" name="subjects" onchange="updateSecondaryOptions()">
+                <option value="">Select a subject</option>
+                <!-- Subjects will be populated dynamically -->
+            </select>
+        </div>
+
+        <!-- Dropdown for selecting secondary options (Initially hidden) -->
+    <div id="secondary-options-container" class="secondary-options" style="display:none;">
+        <label for="secondary-options">Select Option:</label>
+        <select id="secondary-options" name="secondary-options" onchange="openLink()">
+            <option value="">Select an option</option>
+            <option value="notes">Notes</option>
+            <option value="pyqs">PYQs</option>
+            <option value="books">Books</option>
+            <option value="lab-practicals">Lab Practicals</option>
+        </select>
+</div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
