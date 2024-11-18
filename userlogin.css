@@ -1,0 +1,103 @@
+body {
+    background-image: url('Departments\ \(3\).png'); /* Update with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/* Container for the image and the login form */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50mm;
+    width:35%;
+    max-width: 1200px;
+}
+
+/* Styling for the left side image */
+.side-image {
+    margin-top: 50mm;
+    margin-bottom: 50mm;
+    margin-left: 100mm;
+    max-width : 250mm; /* Adjust image size */
+    height: auto;
+}
+
+/* User Login Heading */
+.login-container h2 {
+    color: rgb(64, 13, 114);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Input fields container */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgb(64, 13, 114); /* Purple background */
+    border-radius: 5px;
+    padding: 10px;
+    position: relative; /* Added for icon positioning */
+}
+.input-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color:white; /* White text for the input */
+    font-size: 16px;
+    width: 100%;
+    padding-left: 35px; 
+    ;/* Added padding to avoid text overlapping with icon */
+}
+
+
+
+/* Icons inside input fields */
+.input-container .icon {
+    color:white; /* White color for icons */
+    font-size: 34px; /* Increased icon size */
+    position: absolute; /* Positioning icons inside the input field */
+    left: 10px; /* Adjusts icon position inside the input box */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%);
+}
+
+/* Login button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5d2e8c; /* Purple background */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 45px;
+}
+
+button:hover {
+    background-color: #4a148c; /* Darker purple on hover */
+}
+
+/* Forgot password link */
+.login-container p a {
+    color:white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    position:relative;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+
